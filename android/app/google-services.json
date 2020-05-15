@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "907442575944",
+    "firebase_url": "https://grocery-b3b45.firebaseio.com",
+    "project_id": "grocery-b3b45",
+    "storage_bucket": "grocery-b3b45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907442575944:android:b97b9ac07a580a27cd567d",
+        "android_client_info": {
+          "package_name": "com.protorix.flutter_grocery_shopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "907442575944-4hm6g65uobtnd4bhh0g0aoqfvg53ts2t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbi5UzOHvSsSx-Jn4logHnDdxtdf6CpEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "907442575944-4hm6g65uobtnd4bhh0g0aoqfvg53ts2t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
