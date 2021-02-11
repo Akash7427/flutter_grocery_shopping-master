@@ -38,7 +38,8 @@ class Dashboard extends StatefulWidget {
   _DashboardState createState() => _DashboardState();
 }
 
-class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMixin{
+class _DashboardState extends State<Dashboard>
+    with SingleTickerProviderStateMixin {
   TabController tabController;
 
   @override
@@ -48,25 +49,36 @@ class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMix
     tabController = TabController(length: 4, vsync: this);
   }
 
+  List data;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
         children: <Widget>[
+          
           Padding(
             padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 50.0),
             child: Row(
               children: <Widget>[
-
-                Icon(Icons.menu, color: Colors.black, size: 6 * SizeConfig.imageSizeMultiplier,),
+                Icon(
+                  Icons.menu,
+                  color: Colors.black,
+                  size: 6 * SizeConfig.imageSizeMultiplier,
+                ),
                 Spacer(),
-                Icon(Icons.shopping_cart, color: Colors.black, size: 6 * SizeConfig.imageSizeMultiplier,)
+                Icon(
+                  Icons.shopping_cart,
+                  color: Colors.black,
+                  size: 6 * SizeConfig.imageSizeMultiplier,
+                )
               ],
             ),
           ),
-          SizedBox(height: 5 * SizeConfig.heightMultiplier,),
-
+          SizedBox(
+            height: 5 * SizeConfig.heightMultiplier,
+          ),
           TabBar(
               controller: tabController,
               indicatorColor: Colors.green,
@@ -76,45 +88,50 @@ class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMix
               isScrollable: true,
               tabs: <Widget>[
                 Tab(
-                  child: Text("Vegetables", style: TextStyle(
-                      fontSize: 2.5 * SizeConfig.textMultiplier,
-                      fontFamily: 'OpenSans'
-                  ),),
+                  child: Text(
+                    "Vegetables",
+                    style: TextStyle(
+                        fontSize: 2.5 * SizeConfig.textMultiplier,
+                        fontFamily: 'OpenSans'),
+                  ),
                 ),
                 Tab(
-                  child: Text("Dairy", style: TextStyle(
-                      fontSize: 2.5 * SizeConfig.textMultiplier,
-                      fontFamily: 'OpenSans'
-                  ),),
+                  child: Text(
+                    "Dairy",
+                    style: TextStyle(
+                        fontSize: 2.5 * SizeConfig.textMultiplier,
+                        fontFamily: 'OpenSans'),
+                  ),
                 ),
                 Tab(
-                  child: Text("Nuts & Seeds", style: TextStyle(
-                      fontSize: 2.5 * SizeConfig.textMultiplier,
-                      fontFamily: 'OpenSans'
-                  ),),
+                  child: Text(
+                    "Nuts & Seeds",
+                    style: TextStyle(
+                        fontSize: 2.5 * SizeConfig.textMultiplier,
+                        fontFamily: 'OpenSans'),
+                  ),
                 ),
                 Tab(
-                  child: Text("Fruits", style: TextStyle(
-                      fontSize: 2.5 * SizeConfig.textMultiplier,
-                      fontFamily: 'OpenSans'
-                  ),),
+                  child: Text(
+                    "Fruits",
+                    style: TextStyle(
+                        fontSize: 2.5 * SizeConfig.textMultiplier,
+                        fontFamily: 'OpenSans'),
+                  ),
                 ),
               ]),
           Expanded(
             child: Container(
-              child: TabBarView(
-                  controller: tabController,
-                  children: <Widget>[
-                    Vegetables(),
-                    Dairy(),
-                    Nuts(),
-                    Fruits(),
-                  ]),
+              child: TabBarView(controller: tabController, children: <Widget>[
+                Vegetables(),
+                Dairy(),
+                Nuts(),
+                Fruits(),
+              ]),
             ),
           )
         ],
       ),
-
     );
   }
 }

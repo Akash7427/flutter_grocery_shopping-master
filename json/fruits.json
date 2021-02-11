@@ -1,0 +1,9 @@
+{
+    "kiwi" : [
+        {
+            "name" : "kiwi",
+            "price" : 50,
+            "size" : "gm"
+        }
+    ]
+}
